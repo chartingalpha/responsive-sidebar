@@ -9,8 +9,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <!-- Latest compiled and minified Font Awesome -->
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <!-- Custom css -->
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -28,20 +26,31 @@
           <ul class="sidebar-nav">
             <li>
               <a href="#">
-                <i class="fa fa-inbox"></i>
+                <i class="glyphicon glyphicon-inbox"></i>
                 Inbox
               </a>
             </li>
             <li>
               <a href="#">
-                <i class="fa fa-paper-plane"></i>
+                <i class="glyphicon glyphicon-send"></i>
                 Sent
               </a>
             </li>
             <li>
-              <a href="#" class="">
-                <i class="fa fa-archive"></i>
+              <a href="#">
+                <i class="glyphicon glyphicon-star"></i>
+                Starred
+              </a>
+            <li>
+              <a href="#">
+                <i class="glyphicon glyphicon-hdd"></i>
                 Archive
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="glyphicon glyphicon-trash"></i>
+                Trash
               </a>
             </li>
           </ul>
@@ -52,38 +61,44 @@
             <li>
               <a href="#">
                 Important
-                <span class="label label-default">67</span>
+                <span class="label label-danger">67</span>
               </a>
             </li>
             <li>
               <a href="#">
-                Important
-                <span class="label label-default">67</span>
+                To-dos
+                <span class="label label-warning">2</span>
               </a>
             </li>
             <li>
               <a href="#">
-                Important
-                <span class="label label-default">67</span>
+                Notes
+                <span class="label label-info">1</span>
               </a>
             </li>
           </ul>
         </div>
       </aside>
       <main class="content">
-        <nav class="navbar navbar-default navbar-static-top" role="navigation">
+        <nav class="navbar navbar-default" role="navigation">
           <div class="container-fluid">
             <a class="btn btn-default navbar-btn" href="#" data-toggle="sidebar">
-              <i class="fa fa-bars"></i>
+              <i class="glyphicon glyphicon-menu-hamburger"></i>
               Menu
             </a>
             <ul class="nav navbar-nav pull-right">
-              <li>
-                <a href="#">
+              <li class="dropdown">
+                <a href="#" data-toggle="dropdown" role="dropdown">
                   <img src="img/avatar.png" class="img-circle" height="25" width="25">
                   calvin@calvinchan.net
                   <span class="caret"></span>
                 </a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+                </ul>
               </li>
             </ul>
           </div>
