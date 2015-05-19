@@ -1,4 +1,4 @@
-@sidebar-max: 250px;
+@sidebar-width: 250px;
 
 // Mixins
 .transition(@transition) {
@@ -14,25 +14,26 @@
 
     .content {
       margin-left: 0;
+      .transition(width 0.3s ease-in-out);
     }
   }
 
   .sidebar {
-    width: @sidebar-max;
+    width: @sidebar-width;
   }
 
   .content {
-    margin-left: @sidebar-max;
+    margin-left: @sidebar-width;
   }
 }
 
 @media (min-width: @screen-tablet) {
   .sidebar {
-    width: @sidebar-max;
+    width: @sidebar-width;
   }
 
   .content {
-    margin-left: @sidebar-max;
+    margin-left: @sidebar-width;
   }
 }
 
@@ -52,6 +53,11 @@
   top: 0;
   overflow-x: hidden;
   overflow-y: auto;
+
+  .sidebar-inner {
+    min-width: @sidebar-width;
+  }
+
   .transition(width 0.3s ease-in-out);
 
   .user-panel {
