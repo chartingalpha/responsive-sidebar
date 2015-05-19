@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Responsive Sidebar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified jQuery -->
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <!-- Latest compiled and minified Font Awesome -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <!-- Custom css -->
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body class="sidebar-collapsed">
+    <div id="wrapper">
+      <aside class="sidebar" role="sidebar">
+        <div class="user-panel">
+          <img src="img/avatar.png" class="img-circle user-avatar">
+          <div class="user-profile">
+            <span class="prefix">Sign in as</span>
+            <span class="email">calvin@calvinchan.net</span>
+          </div>
+        </div>
+        <ul class="sidebar-nav">
+          <li>
+            <a href="#">
+              <i class="fa fa-inbox"></i>
+              Inbox
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa fa-paper-plane"></i>
+              Sent
+            </a>
+          </li>
+          <li>
+            <a href="#" class="">
+              <i class="fa fa-archive"></i>
+              Archive
+            </a>
+          </li>
+        </ul>
+        <div class="divider">
+          Labels
+        </div>
+        <ul class="sidebar-nav">
+          <li>
+            <a href="#">
+              Important
+              <span class="label label-default">67</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              Important
+              <span class="label label-default">67</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              Important
+              <span class="label label-default">67</span>
+            </a>
+          </li>
+        </ul>
+      </aside>
+      <main class="content">
+        <nav class="navbar navbar-default navbar-static-top" role="navigation">
+          <div class="container-fluid">
+            <a class="btn btn-default navbar-btn" href="#" data-toggle="sidebar">
+              <i class="fa fa-bars"></i>
+              Menu
+            </a>
+            <ul class="nav navbar-nav pull-right">
+              <li>
+                <a href="#">
+                  <img src="img/avatar.png" class="img-circle" height="25" width="25">
+                  calvin@calvinchan.net
+                  <span class="caret"></span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <div class="container-fluid">
+          Some content goes here...
+        </div>
+      </main>
+    </div>
+    <!-- wrapper -->
+
+    <script>
+      // DOM ready
+      $(function () {
+        // Click handler
+        $('a[data-toggle=sidebar]').on('click', function () {
+          $('body').toggleClass('sidebar-collapsed');
+        });
+      });
+    </script>
+  </body>
+</html>

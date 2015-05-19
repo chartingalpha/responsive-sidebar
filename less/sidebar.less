@@ -1,0 +1,113 @@
+@sidebar-max: 250px;
+
+// Mixins
+.transition(@transition) {
+  -webkit-transition: @transition;
+          transition: @transition;
+}
+
+@media (max-width: @screen-tablet) {
+  .sidebar-collapsed {
+    .sidebar {
+      width: 0;
+    }
+
+    .content {
+      margin-left: 0;
+    }
+  }
+
+  .sidebar {
+    width: @sidebar-max;
+  }
+
+  .content {
+    margin-left: @sidebar-max;
+  }
+}
+
+@media (min-width: @screen-tablet) {
+  .sidebar {
+    width: @sidebar-max;
+  }
+
+  .content {
+    margin-left: @sidebar-max;
+  }
+}
+
+.content {
+  height: inherit;
+  overflow-x: hidden ;
+  overflow-y: auto;
+  min-width: 500px;
+}
+
+.sidebar {
+  background-color: @dark;
+  position: fixed;
+  color: @light;
+  height: 100%;
+  left: 0;
+  top: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  .transition(width 0.3s ease-in-out);
+
+  .user-panel {
+    padding: 10px 15px;
+
+    .user-avatar {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      margin-right: 15px;
+      vertical-align: top;
+    }
+
+    .user-profile {
+      display: inline-block;
+      width: 160px;
+
+      .prefix {
+        color: darken(@light, 30%);
+      }
+      .email {
+        display: block;
+      }
+    }
+  }
+
+  .divider {
+    padding: 10px 15px;
+    background: @black;
+    color: darken(@light, 30%);
+  }
+}
+
+.sidebar-nav {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+
+  li {
+    position: relative;
+    display: block;
+  }
+
+  a {
+    color: @light;
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+  }
+
+  a:hover {
+    text-decoration: none;
+    background-color: @black;
+  }
+
+  .fa {
+    margin-right: 10px;
+  }
+}
